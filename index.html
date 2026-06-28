@@ -28,7 +28,7 @@
         left: 0;
         width: 100%;
         font:bolder;
-        text-align: center;
+        text-align: right;
         font-size: clamp(1rem, 1vw, 1rem);
         padding: 1rem;
       }
@@ -86,6 +86,7 @@
         color: #14161c;
         overflow: hidden;
       }
+   
 
       .heading {
         position: absolute;
@@ -96,6 +97,11 @@
         white-space: nowrap;
         visibility: hidden;
       }
+      .info {
+        padding: 1rem;
+        font-size: clamp(.8rem, 1.2vw, 1.2rem);
+      }
+
     </style>
   </head>
   <body>
@@ -109,7 +115,7 @@
     </div>
 
     <section class="hero">
-        <div style="padding: 1rem;">
+        <div class="info">
        
             <hr style="margin-bottom: 1rem; width: 100%">
            
@@ -123,8 +129,8 @@
 
           
             <p>
-                                                  <a style="color: black; text-decoration: none"  href="https://github.com/gergacio"> GitHub</a> </p>
-     <p>X (Twitter)</p> 
+             <a style="color: black; text-decoration: none"  href="https://github.com/gergacio"> GitHub</a> </p>
+            <p>X (Twitter)</p> 
 
             <p>
                                                   <a style="color: black; text-decoration: none"  href="https://www.linkedin.com/in/gggbg/"> LinkedIn</a> </p>
@@ -134,11 +140,11 @@
             <p>Instagram</p>
             <p>Facebook · Meta</p>
              <p class="label"><a style="color: black" href="https://ouk.vercel.app/">OUK UI <i class="fa-solid fa-square-arrow-up-right"></i></a></p>
+           </div>
+     
 
-                   
-            
-        </div>
-      <h1 class="heading">OUK UI</h1>
+        
+         <h1 class="heading">OUK UI</h1>
    
     
     </section>
@@ -218,7 +224,7 @@
     </script>
     <div>
        
- <p class="footer">© 2026</p>
+ <p class="footer info">© 2026</p>
     </div>
      
   
