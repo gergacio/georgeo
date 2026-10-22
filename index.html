@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gospodinov</title>
+    <title>Georgi Gospodinov</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,136 +46,94 @@
         .s1 .container { background: #E85A2B; color: #000; }
         .s1 hr { border-color: #000; opacity: 1; }
         .s2 .container { background: #000; color: #fff; }
-        .s3 .container { background: #F2F0EC; color:#000; }
+        .s3 .container { background: #F5F0E8; color: #000; }
         .s4 .container { background: #1A3DE8; color: #fff; }
         .s4 hr { border-color: rgba(255,255,255,.5); }
-        .s5 .container { background: #F2F0EF; color: #000; }
-
-
-        
-
+        .s5 .container { background: #E8E02B; color: #000; }
     </style>
 </head>
 <body>
     <main>
 
-  
+ 
+
+    
 
         <section class="s3">
             <div class="container">
-                <p class="tag">01</p>
-                <hr style="color: white">
+                <p class="tag"></p>
+                
                 <div>
-
-                
-                </div>
-
-
-            
-          
-                <div class="cols">
-                           
-                        <div>
-                            
-
-  
-
-
-                         <h1 class="tag "> ▆▆  Gospodinov G. G.</h1> 
-                    
-                            <p class="details " style="font-size: smaller;">formal science</p></div>
-                
-                         </div>
                    
-                      
-                  
-                
-                      <div>
-                        
-  
-               
-
-  
-                            <div style="margin-bottom: 2rem;">
-                                    
-                        </p>
-                          
-                            </div>
-
-                
-                
-            
                 </div>
               
+                <p style="font-size:larger" class="label">Gospodinov G. G.</p>
+                 <p class="label">OUK UI</p>
+                <hr style="width: 25rem; height: 10rem;">
+              
+
+                  
+
+              
+            
                 <div class="cols">
                     <div>
-        
-                    </div>
-                    
+                      
 
-  
-                            <div style="margin-bottom: 2rem;">
-                                 <h1>O U K</h1>
-                                 
-                                            <p class="tag"><a style="color: black;  text-decoration: none; border: 1px solid black; padding: 1px;" href="https://ouk.vercel.app/"> Ꙋ guidence</a>
-                                  <p style="font-size: small;">©handwritten </p>
-                        </p>
-                          
-                         
+                     
 
-                            <p style="margin-top: 1rem;" class="label"><a style="color: black;  text-decoration: none; " href="https://regs-indol.vercel.app/">  regs </a></p>
+                        <p style="font-size:x-small" class="label">software</p>
 
-                    <div>
-                             <div>
+                        <p style="font-size:x-small" class="label">networking</p>
+
+                        <p style="font-size:x-small" class="label">electrical</p>
 
                       
 
-                    
-
-                    
 
 
-                       
-                       
-                        
-
-                        <div>
-                            <p>▆ </p>
-
-                       
-
-                     <p class="tag"><a style="font-size:smaller; color: black; text-decoration: none"  href="https://github.com/gergacio">  GitHub</a> 
-                  <span class="tag"><a style="font-size: smaller; color: black; text-decoration: none"  href="https://www.linkedin.com/in/gggbg/"> LinkedIn</a></span>
-
-
-                
-                </p>
-
-
-
-                        </div>
-                      </div>
-                        
-             
                     </div>
+                    <div>
+                          
+                          <p><a style="font-size: smaller; color: black;  text-decoration: none;  padding: 1px;" href="https://ouk.vercel.app/"> Ꙋ guidence</a></p>
+                            <p><a style="font-size: smaller; color: black;  text-decoration: none; " href="https://regs-indol.vercel.app/">  regs </a></p>
+
+                    <hr style="width: 5rem; height: 10rem;">
+
+                         <p class=" "><a style="font-size: smaller; color: black; text-decoration: none"  href="https://github.com/gergacio""> GitHub</a></sp>
+                        <p class=" "><a style="font-size: smaller; color: black; text-decoration: none"  href="https://www.linkedin.com/in/gggbg/"> LinkedIn</a></p>
             
+
+                            
+                            
+                            
+                      
+                    </div>
+                
                 </div>
-        
+                 
+                          
+
+                                
+                              
+                                
+                </p>
+                    <p class="label bottom right">   © 2026</p>  
                 
 
-                <div class="bottom label">
-                   
+                <hr>
+             
 
-                <p style="font-size: smaller;" class="label bottom right">© 2026</p>
-                </div>
+                
+                 
+               
             </div>
+           
+           
         </section>
 
+    
 
-
-
-
-   
 
     </main>
 
@@ -192,7 +150,33 @@
 
         const sections = gsap.utils.toArray('section');
 
-     
+        sections.forEach((section, i) => {
+            const container = section.querySelector('.container');
+
+            if (i > 0) {
+                gsap.set(container, { rotation: 30 });
+                gsap.to(container, {
+                    rotation: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top bottom',
+                        end: 'top 25%',
+                        scrub: true,
+                    }
+                });
+            }
+
+            if (i < sections.length - 1) {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: 'bottom bottom',
+                    end: 'bottom top',
+                    pin: true,
+                    pinSpacing: false,
+                });
+            }
+        });
     </script>
 </body>
 </html>
